@@ -1,0 +1,233 @@
+The Hard Parts of UI Development
+  JavaScript, DOM & Events
+    User Interaction & DOM Updates
+    00:03:11: Callback Queue
+              https://frontendmasters.com/courses/hard-parts-ui-dev/user-interaction-dom-updates?t=191
+    
+    00:05:58: JS puts parens at the end
+              https://frontendmasters.com/courses/hard-parts-ui-dev/user-interaction-dom-updates?t=358
+    
+    00:10:11: Model of the web browser
+              https://frontendmasters.com/courses/hard-parts-ui-dev/user-interaction-dom-updates?t=611
+    
+  Data-Binding in the UI
+    Separating Data & View Updates
+    00:10:05: single standardizer converter function for all underlying data
+              https://frontendmasters.com/courses/hard-parts-ui-dev/separating-data-view-updates?t=605
+    
+    Understanding the dataToView Function
+    00:02:14: Change data, create a view. Define everything in data. Stored state.
+              https://frontendmasters.com/courses/hard-parts-ui-dev/understanding-the-datatoview-function?t=134
+    
+    One-Way Data Binding User Interactions
+    00:12:39: Only source of data and therefore change becomes javascript
+              https://frontendmasters.com/courses/hard-parts-ui-dev/one-way-data-binding-user-interactions?t=759
+    
+    00:13:36: Change of data is piped
+              https://frontendmasters.com/courses/hard-parts-ui-dev/one-way-data-binding-user-interactions?t=816
+    
+    00:13:53: Semi-visual called in Virtual DOM
+              https://frontendmasters.com/courses/hard-parts-ui-dev/one-way-data-binding-user-interactions?t=833
+    
+    Predictable Data & View Flow
+    00:00:23: goal: Display content to users and for them to change that content
+              https://frontendmasters.com/courses/hard-parts-ui-dev/predictable-data-view-flow?t=23
+    
+    00:05:21: View and Data become bound
+              https://frontendmasters.com/courses/hard-parts-ui-dev/predictable-data-view-flow?t=321
+    
+    00:07:26: Mental Models and Design Patterns
+              https://frontendmasters.com/courses/hard-parts-ui-dev/predictable-data-view-flow?t=446
+    
+  Virtual DOM
+    Auto-Updating Views UI
+    00:02:44: Rule: There must be corresponding data change to what the user sees
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-ui?t=164
+    
+    00:04:33: There is JS runtime and the C++ run time, C++ DOM. Render engines to the page
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-ui?t=273
+    
+    00:06:14: DOM API is the borderline english language of how we can access these C++ list
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-ui?t=374
+    
+    00:06:28: WEB IDL
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-ui?t=388
+    
+    00:08:11: Script node in the C++ elements
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-ui?t=491
+    
+    00:09:30: Cannot change pixels without changing underlying data
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-ui?t=570
+    
+    00:09:36: Even if its true or false or true or not
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-ui?t=576
+    
+    00:09:54: Pixels are some manifestation of some data.
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-ui?t=594
+    
+    00:10:06: Hidden Link in Document to access the C++ DOM
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-ui?t=606
+    
+    00:12:06: A JS input object that corresponds to C++ object
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-ui?t=726
+    
+    Auto-Updating Views with setInterval
+    00:02:41: Terms: Call Stack, Callback queue, Event Loop
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-with-setinterval?t=161
+    
+    00:03:12: Execution Contexxt
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-with-setinterval?t=192
+    
+    00:04:00: Accessor objects, setters and getters
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-with-setinterval?t=240
+    
+    00:04:08: Launching Pad -- Use what l have learned so far to go further:
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-with-setinterval?t=248
+    
+    00:05:24: Div not showing is underlying data because blank data is data, its state that 
+              can be changed, every single thing can be changed by the user
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-with-setinterval?t=324
+    
+    00:11:13: Setters and Getters
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-with-setinterval?t=673
+    
+    00:11:13: Unattached elements are those not used in the C++ dom. The containers are data 
+              also.
+              https://frontendmasters.com/courses/hard-parts-ui-dev/auto-updating-views-with-setinterval?t=673
+    
+    Understanding UI Components
+    00:01:17: Data cause of everything we can see and change
+              https://frontendmasters.com/courses/hard-parts-ui-dev/understanding-ui-components?t=77
+    
+    00:14:55: Mental framework for thinking about how to structure this relationship
+              https://frontendmasters.com/courses/hard-parts-ui-dev/understanding-ui-components?t=895
+    
+    00:14:59: Everything modelled out with underlying data
+              https://frontendmasters.com/courses/hard-parts-ui-dev/understanding-ui-components?t=899
+    
+    00:21:30: Component is a function that associates, describes, captures in full the 
+              relationship between underlying data in JS and what the user sees. Full route 
+              through, a full pipeline through, underlyig data and what the user act on what 
+              they see
+              https://frontendmasters.com/courses/hard-parts-ui-dev/understanding-ui-components?t=1290
+    
+    UI Component dataToView Function
+    00:04:12: Visual Representation in Javascript of our page
+              https://frontendmasters.com/courses/hard-parts-ui-dev/ui-component-datatoview-function?t=252
+    
+    00:11:04: Data Binding
+              https://frontendmasters.com/courses/hard-parts-ui-dev/ui-component-datatoview-function?t=664
+    
+    UI Component Interaction
+    00:03:58: DataToView
+              https://frontendmasters.com/courses/hard-parts-ui-dev/ui-component-interaction?t=238
+    
+    00:04:16: New State
+              https://frontendmasters.com/courses/hard-parts-ui-dev/ui-component-interaction?t=256
+    
+    00:09:09: they are all trees but with just different names
+              https://frontendmasters.com/courses/hard-parts-ui-dev/ui-component-interaction?t=549
+    
+    00:13:59: Full UI Component describes in full underlying data and appearances of what the 
+              user sees
+              https://frontendmasters.com/courses/hard-parts-ui-dev/ui-component-interaction?t=839
+    
+    00:18:50: UI Components are a core part of building UIs
+              https://frontendmasters.com/courses/hard-parts-ui-dev/ui-component-interaction?t=1130
+    
+    Emulate HTML with String Interpolation
+    00:05:39: Visual Code -- string literals;
+              https://frontendmasters.com/courses/hard-parts-ui-dev/emulate-html-with-string-interpolation?t=339
+    
+    00:08:36: JS description of what shows up on the dom. Visual representation f our 
+              information thats gonna display
+              https://frontendmasters.com/courses/hard-parts-ui-dev/emulate-html-with-string-interpolation?t=516
+    
+    Creating a JavaScript Virtual DOM
+    00:02:22: Thinking about How to structure code
+              https://frontendmasters.com/courses/hard-parts-ui-dev/creating-a-javascript-virtual-dom?t=142
+    
+    JS Virtual DOM User Interaction
+    00:05:19: Two different states. The only user action can change something is via state.
+              https://frontendmasters.com/courses/hard-parts-ui-dev/js-virtual-dom-user-interaction?t=319
+    
+  Composition & Functional Components
+    Using Lists for UI Development
+    00:00:19: Data is the only source of determination for what appears on the screen
+              https://frontendmasters.com/courses/hard-parts-ui-dev/using-lists-for-ui-development?t=19
+    
+    00:01:23: Lists are central to UI development
+              https://frontendmasters.com/courses/hard-parts-ui-dev/using-lists-for-ui-development?t=83
+    
+    00:03:10: Map allows us to hit every element, with a function in this a convertor list.
+              https://frontendmasters.com/courses/hard-parts-ui-dev/using-lists-for-ui-development?t=190
+    
+    00:06:16: LowKey love working with arrays
+              https://frontendmasters.com/courses/hard-parts-ui-dev/using-lists-for-ui-development?t=376
+    
+    Composable Code with Map and Spread
+    00:01:15: Flexible virtual visual DOM
+              https://frontendmasters.com/courses/hard-parts-ui-dev/composable-code-with-map-and-spread?t=75
+    
+    00:06:35: The Event Object
+              https://frontendmasters.com/courses/hard-parts-ui-dev/composable-code-with-map-and-spread?t=395
+    
+    00:15:35: Getter Setter Methods
+              https://frontendmasters.com/courses/hard-parts-ui-dev/composable-code-with-map-and-spread?t=935
+    
+    00:17:37: Describe what we want and it will show up
+              https://frontendmasters.com/courses/hard-parts-ui-dev/composable-code-with-map-and-spread?t=1057
+    
+    00:22:03: vDOM --> change our data into a visual representation
+              https://frontendmasters.com/courses/hard-parts-ui-dev/composable-code-with-map-and-spread?t=1323
+    
+    00:22:47: Convertor --> list to representation of DOM
+              https://frontendmasters.com/courses/hard-parts-ui-dev/composable-code-with-map-and-spread?t=1367
+    
+    Event API
+    00:00:06: Event API - describes the user action in more detail and on what element was the 
+              input happening on
+              https://frontendmasters.com/courses/hard-parts-ui-dev/event-api?t=6
+    
+    00:07:13: Event API has everything about the user action, we need was a keypressed?
+              https://frontendmasters.com/courses/hard-parts-ui-dev/event-api?t=433
+    
+    Generating VDOM Elements from Array
+    00:01:09: Functional Component is creating a piece of our visual representation of the 
+              page
+              https://frontendmasters.com/courses/hard-parts-ui-dev/generating-vdom-elements-from-array?t=69
+    
+    00:13:38: UI Framework Design
+              https://frontendmasters.com/courses/hard-parts-ui-dev/generating-vdom-elements-from-array?t=818
+    
+  Performance Improvements
+    Update the DOM on Data Change
+    00:01:35: Code that hook into to handle state and to handle data persisting
+              https://frontendmasters.com/courses/hard-parts-ui-dev/update-the-dom-on-data-change?t=95
+    
+    00:02:21: Update the DOM on the data Change
+              https://frontendmasters.com/courses/hard-parts-ui-dev/update-the-dom-on-data-change?t=141
+    
+    00:04:31: State Hook??
+              https://frontendmasters.com/courses/hard-parts-ui-dev/update-the-dom-on-data-change?t=271
+    
+    Automatic Updates with Hooks
+    00:10:29: Code we can hook into that changes the behaviour, in this case of handle in this 
+              case UI component
+              https://frontendmasters.com/courses/hard-parts-ui-dev/automatic-updates-with-hooks?t=629
+    
+    DOM Diffing Setup
+    00:00:37: Layout and Render Engine in C++
+              https://frontendmasters.com/courses/hard-parts-ui-dev/dom-diffing-setup?t=37
+    
+    00:01:33: Browser's HTML parser
+              https://frontendmasters.com/courses/hard-parts-ui-dev/dom-diffing-setup?t=93
+    
+    Conditionally Updating the DOM
+    00:11:25: Mounting of the elements
+              https://frontendmasters.com/courses/hard-parts-ui-dev/conditionally-updating-the-dom?t=685
+    
+    DOM Diffing User Interaction
+    00:04:02: target property is an accessor objext
+              https://frontendmasters.com/courses/hard-parts-ui-dev/dom-diffing-user-interaction?t=242
+    
