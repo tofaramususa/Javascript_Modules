@@ -45,19 +45,44 @@ function mapWith(array, callback) {
 
 
 // Challenge 6
-function reduce(array, callback, initialValue) {
-
+function reduce(array, callback, initialValue)
+{
+  var result
+  
+  for(let i = 0; i < array.length; i++)
+    {
+      initialValue = callback(array[i], initialValue)
+    }
+  
+  return initialValue
 }
 
+const nums = [4, 1, 3];
+const add = function(a, b) { return a + b; }
+console.log(reduce(nums, add, 0));   //-> 8
 
 // Challenge 7
-function intersection(arrays) {
-
+function intersect(first, second)
+{
+  var result = []
+  
+  for(let i = 0; i < first.length; i++)
+    {
+      if(second.includes(first[i]))
+        result.push(first[i])
+    }
+  return result;
 }
 
-// console.log(intersection([[5, 10, 15, 20], [15, 88, 1, 5, 7], [1, 10, 15, 5, 20]]));
-// should log: [5, 15]
+function intersection(arrays) 
+{
+  return arrays.reduce((first,second) => {
+    return intersect(first,second)
+  }) 
+}
 
+console.log(intersection([[5, 10, 15, 20], [15, 88, 1, 5, 7], [1, 10, 15, 5, 20]]));
+// should log: [5, 15].\
 
 // Challenge 8
 function union(arrays) {

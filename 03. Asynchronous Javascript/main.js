@@ -14,8 +14,9 @@ function testMe() {
 
 /* CHALLENGE 2 */
 
-function delayedGreet() {
-  // ADD CODE HERE
+function delayedGreet()
+{
+	
 }
 // Uncomment the following line to check your work!
 // delayedGreet(); // should log (after 3 seconds): welcome

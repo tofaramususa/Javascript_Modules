@@ -1,24 +1,28 @@
 // CHALLENGE 1
-function createFunction() {
+function createFunction() 
+{
+  
+  return(() => {return console.log('Hello')})
 
 }
 
 // /*** Uncomment these to check your work! ***/
-// const function1 = createFunction();
-// function1(); // => should console.log('hello');
+const function1 = createFunction();
+function1(); // => should console.log('hello');
 
 
 // CHALLENGE 2
-function createFunctionPrinter(input) {
+function createFunctionPrinter(input)
+{
+	  return(() => {return console.log(input)})
 
 }
 
 // /*** Uncomment these to check your work! ***/
-// const printSample = createFunctionPrinter('sample');
-// printSample(); // => should console.log('sample');
-// const printHello = createFunctionPrinter('hello');
-// printHello(); // => should console.log('hello');
-
+const printSample = createFunctionPrinter('sample');
+printSample(); // => should console.log('sample');
+const printHello = createFunctionPrinter('hello');
+printHello(); // => should console.log('hello');
 
 // CHALLENGE 3
 function outer() {
@@ -45,23 +49,35 @@ const jasCounter = outer();
 // willCounter();
 
 
-function addByX(x) {
+willCounter();
+willCounter();
+willCounter();
 
+jasCounter();
+willCounter();
+
+//trick one here
+function addByX(x) 
+{
+	return function (num)
+    {
+       return console.log(num + x);
+    }
 }
 
-// /*** Uncomment these to check your work! ***/
-// const addByTwo = addByX(2);
-// addByTwo(1); // => should return 3
-// addByTwo(2); // => should return 4
-// addByTwo(3); // => should return 5
+/*** Uncomment these to check your work! ***/
+const addByTwo = addByX(2);
+addByTwo(1); // => should return 3
+addByTwo(2); // => should return 4
+addByTwo(3); // => should return 5
 
-// const addByThree = addByX(3);
-// addByThree(1); // => should return 4
-// addByThree(2); // => should return 5
+const addByThree = addByX(3);
+addByThree(1); // => should return 4
+addByThree(2); // => should return 5
 
-// const addByFour = addByX(4);
-// addByFour(4); // => should return 8
-// addByFour(5); // => should return 9
+const addByFour = addByX(4);
+addByFour(4); // => should return 8
+addByFour(5); // => should return 9
 
 
 // CHALLENGE 4

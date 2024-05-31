@@ -270,31 +270,49 @@ console.log(divisibleByFivePairSum([13, 22, 8, -3, 12])); // => [[ 0, 1 ], [ 0, 
   * Challenge 14 *
   * ============ */
   
-  function highestScore(students) {
-	// your code here...
-  
-  
+  function highestScore(students)
+  {
+	if(students.length === 0)
+	  return ''
+	var highestStudentScore = students[0]
+	
+	for(let i = 0; i < students.length; i++)
+	  {
+		if(students[i] > highestStudentScore)
+		  highestStudentScore = students[i]
+	  }
+	const {name, id} = highestStudentScore
+	const result = name.split(' ').map(x => x[0]).join('')  
+	return result + id;
   }
   
   //Uncomment the lines below to test your function:
   
-  // var students = [
-  // {name: 'Will Sentance', id: 128, score: -42},
-  // {name: 'Jamie Bradshaw', id: 32, score: 57},
-  // {name: 'Lisa Simpson', id: 2, score: 99},
-  // {name: 'Luke Skywalker', id: 256, score: 94}
-  // ];
+//   var students = [
+//   {name: 'Will Sentance', id: 128, score: -42},
+//   {name: 'Jamie Bradshaw', id: 32, score: 57},
+//   {name: 'Lisa Simpson', id: 2, score: 99},
+//   {name: 'Luke Skywalker', id: 256, score: 94}
+//   ];
   
-  // console.log(highestScore(students)); //=> 'LS2'
+//   console.log(highestScore(students)); //=> 'LS2'
   
   
   /* =========== *
   * Challenge 15 *
   * ============ */
   
-  function leastCommonMultiple(num1, num2) {
-	// your code here...
-  
+  function leastCommonMultiple(num1, num2)
+  {
+	var result = num1 >= num2 ? num2 : num1;
+	
+	while(1)
+	  {
+		if(result % num1 === 0 && result % num2 === 0)
+			break;
+		result++;
+	  }
+	return result
   }
   
   
