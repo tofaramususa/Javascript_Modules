@@ -14,62 +14,96 @@ function testMe() {
 
 /* CHALLENGE 2 */
 
-function delayedGreet()
-{
+function delayedGreet() {
+	// ADD CODE HERE
+	setTimeout(() => {
+	  console.log("welcome")
+	}, 3000);
+	// console.log("welcome")
+  }
+  // Uncomment the following line to check your work!
+  // delayedGreet(); // should log (after 3 seconds): welcome
+  
+  
+  /* CHALLENGE 3 */
+  
+  // function helloGoodbye() {
+  //   // ADD CODE HERE
+  //   console.log("hello")
+  //   setTimeout(() => {
+  //     console.log("welcome")
+  //   }, 3000);
 	
-}
-// Uncomment the following line to check your work!
-// delayedGreet(); // should log (after 3 seconds): welcome
-
-
-/* CHALLENGE 3 */
-
-function helloGoodbye() {
-  // ADD CODE HERE
-}
-// Uncomment the following line to check your work!
-// helloGoodbye(); // should log: hello // should also log (after 3 seconds): good bye
-
-
-/* CHALLENGE 4 */
-
-function brokenRecord() {
-  // ADD CODE HERE
-}
-// Uncomment the following line to check your work!
-// brokenRecord(); // should log (every second): hi again
-
-
-/* CHALLENGE 5 */
-
-function limitedRepeat() {
-  // ADD CODE HERE
-}
-// Uncomment the following line to check your work!
-// limitedRepeat(); // should log (every second, for 5 seconds): hi for now
-
-
-/* CHALLENGE 6 */
-
-function everyXsecsForYsecs() {
-  // ADD CODE HERE
-}
-// Uncomment the following lines to check your work!
-// function theEnd() {
-//   console.log('This is the end!');
-// }
-// everyXsecsForYsecs(theEnd, 2, 20); // should invoke theEnd function every 2 seconds, for 20 seconds): This is the end!
-
+  // }
+  // Uncomment the following line to check your work!
+  // helloGoodbye(); // should log: hello // should also log (after 3 seconds): good bye
+  
+  
+  /* CHALLENGE 4 */
+  
+  function brokenRecord() 
+  {
+	setInterval(() => {
+	  return console.log("hi again")
+	},1000)
+  }
+  // Uncomment the following line to check your work!
+  // brokenRecord(); // should log (every second): hi again
+  
+  
+  /* CHALLENGE 5 */
+  
+  // function limitedRepeat()
+  // {
+  //     var repeat = setInterval(() => {
+  //     return console.log("hi for now")
+  //   },1000)
+  //   setTimeout(() => {
+  //     clearInterval(repeat);   
+  //   	}, 5000)
+  // }
+  // // Uncomment the following line to check your work!
+  // limitedRepeat(); // should log (every second, for 5 seconds): hi for now
+  
+  
+  /* CHALLENGE 6 */
+  
+  function everyXsecsForYsecs(func, interval, duration) {
+	  var repeat = setInterval(func, interval * 1000)
+	setTimeout(() => {
+	  clearInterval(repeat);   
+		}, duration * 1000)
+  }
+  // Uncomment the following lines to check your work!
+  function theEnd() {
+	console.log('This is the end!');
+  }
+  everyXsecsForYsecs(theEnd, 2, 20); // should invoke theEnd function every 2 seconds, for 20 seconds): This is the end!  
 
 /* CHALLENGE 7 */
 
-function delayCounter(target, wait) {
+/* CHALLENGE 7 */
 
+function delayCounter(target, wait)
+{
+  let number = 1;
+  return (() => {
+    			let interval = setInterval(() => {
+          if (number <= target)
+              {
+                console.log(number++);
+              }
+          else 
+            {
+               clearInterval(interval) 
+            }
+          }, wait)
+})
 }
 
 // UNCOMMENT THESE TO TEST YOUR WORK!
-// const countLogger = delayCounter(3, 1000)
-// countLogger();
+const countLogger = delayCounter(3, 1000)
+countLogger();
 // After 1 second, log 1
 // After 2 seconds, log 2
 // After 3 seconds, log 3
@@ -77,12 +111,16 @@ function delayCounter(target, wait) {
 /* CHALLENGE 8 */
 
 function promised (val) {
-  // ADD CODE HERE
+
+  return new Promise((resolve, reject)=>
+  {
+    setTimeout(() => resolve(val), 2000)
+  })
 }
 
 // UNCOMMENT THESE TO TEST YOUR WORK!
-// const createPromise = promised('wait for it...');
-// createPromise.then((val) => console.log(val));
+const createPromise = promised('wait for it...');
+createPromise.then((val) => console.log(val)); 
 // will log "wait for it..." to the console after 2 seconds
 
 /* CHALLENGE 9 */
