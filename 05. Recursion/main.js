@@ -1,26 +1,31 @@
 // Type JavaScript here and click "Run Code" or press Ctrl + s
 console.log('Hello, world!');
 
-
 // Challenge 1
 function countdown(n) {
 
+  console.log(n)
+  
+  if(n > 0)
+    countdown(n-1)
 }
 
 // To check if you've completed it, uncomment these console.logs!
-// countdown(5);
-// countdown(10);
-
+countdown(5);
+countdown(10);
 
 // Challenge 2
-function sum(array) {
+function sum(array)
+{
+  if(array.length === 0)
+    return 0
+  return array[0] + sum(array.splice(1))
 
 }
 
 // uncomment these to check your work
 //  console.log(sum([1,1,1])); // -> returns 3
 //  console.log(sum([1,2,3,4,5,6])); // -> returns 21
-
 
 // Challenge 3
 function palindrome(string) {
@@ -31,9 +36,7 @@ function palindrome(string) {
 // console.log(palindrome("llama mall")); //-> true
 // console.log(palindrome("jmoney")); //-> false
 
-
 // Challenge 4
-
 function isPrime(num) {
 
 }
