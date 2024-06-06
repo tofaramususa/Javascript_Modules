@@ -4,22 +4,20 @@
 
 /*** CHALLENGE 1 ***/
 
-function makePerson(name, age) {
-	// add code here
+// function makePerson(name, age)
+// {
+//   var object = {}
+//   object.name = name
+//   object.age = age
+//   return object
+// }
+
+// const vicky = makePerson('Vicky', 24);
 
 
-}
-
-const vicky = makePerson('Vicky', 24);
-
-
-// /********* Uncomment these lines to test your work! *********/
+// // /********* Uncomment these lines to test your work! *********/
 // console.log(vicky.name); // -> Logs 'Vicky'
 // console.log(vicky.age); // -> Logs 24
-
-
-
-
 
 /****************************************************************
                        USING OBJECT.CREATE
@@ -27,40 +25,42 @@ const vicky = makePerson('Vicky', 24);
 
 /*** CHALLENGE 2 ***/
 
-const personStore = {
-	// add code here
-
-
+const personStore = 
+{
+  greet: () => {console.log('hello')}
 };
 
-// /********* Uncomment this line to test your work! *********/
+// // /********* Uncomment this line to test your work! *********/
 // personStore.greet(); // -> Logs 'hello'
 
 
 
 /*** CHALLENGE 3 ***/
 
-function personFromPersonStore(name, age) {
-	// add code here
-
-
+function personFromPersonStore(name, age)
+{
+  var object = Object.create(personStore)
+  object.name = name
+  object.age = age
+  return object
 }
 
 const sandra = personFromPersonStore('Sandra', 26);
 
 
 // /********* Uncomment these lines to test your work! *********/
-// console.log(sandra.name); // -> Logs 'Sandra'
-// console.log(sandra.age); //-> Logs 26
-// sandra.greet(); //-> Logs 'hello'
+console.log(sandra.name); // -> Logs 'Sandra'
+console.log(sandra.age); //-> Logs 26
+sandra.greet(); //-> Logs 'hello'
 
 
 
 /*** CHALLENGE 4 ***/
 
 // add code here
+sandra.introduce = () => {console.log("Hi my name is {sandra.name}")}
 
-// sandra.introduce(); // -> Logs 'Hi, my name is Sandra'
+sandra.introduce(); // -> Logs 'Hi, my name is Sandra'
 
 
 
@@ -72,8 +72,9 @@ const sandra = personFromPersonStore('Sandra', 26);
 
 /*** CHALLENGE 5 ***/
 
-function PersonConstructor() {
-	// add code here
+function PersonConstructor() 
+{
+  this.greet = () => {console.log('Hello')}
 
 
 }
@@ -81,33 +82,34 @@ function PersonConstructor() {
 
 // /********* Uncomment this line to test your work! *********/
 const simon = new PersonConstructor;
-// simon.greet(); // -> Logs 'hello'
+simon.greet(); // -> Logs 'hello'
 
 
 
 /*** CHALLENGE 6 ***/
 
-function personFromConstructor(name, age) {
-	// add code here
-
-
+function personFromConstructor(name, age)
+{
+  this.name = name
+  this.age = age
+    this.greet = () => {console.log('Hello')}
+  
 }
 
-const mike = personFromConstructor('Mike', 30);
+const mike = new personFromConstructor('Mike', 30);
 
 
 // /********* Uncomment these lines to test your work! *********/
-// console.log(mike.name); // -> Logs 'Mike'
-// console.log(mike.age); //-> Logs 30
-// mike.greet(); //-> Logs 'hello'
+console.log(mike.name); // -> Logs 'Mike'
+console.log(mike.age); //-> Logs 30
+mike.greet(); //-> Logs 'hello'
 
 
 
 /*** CHALLENGE 7 ***/
 // add code here
-
-
-// mike.introduce(); // -> Logs 'Hi, my name is Mike'
+personFromConstructor.prototype.introduce = function () {console.log(`Hi, my name is ${this.name}`)}
+mike.introduce(); // -> Logs 'Hi, my name is Mike'
 
 
 /****************************************************************
@@ -116,34 +118,43 @@ const mike = personFromConstructor('Mike', 30);
 
 /*** CHALLENGE 8 ***/
 
-class PersonClass {
-	constructor() {
-    // add code here
-
-
+class PersonClass 
+{
+	constructor(name)
+  {
+    name: name
 	}
 
 	// add code here
-
+  greet = function () {
+    console.log('Hello')
+  }
 }
-
 
 // /********* Uncomment this line to test your work! *********/
 const george = new PersonClass;
-// george.greet(); // -> Logs 'hello'
-
-
+george.greet(); // -> Logs 'hello'
 
 /*** CHALLENGE 9 ***/
 
-// add code here
+class DeveloperClass extends PersonClass
+  {
+    constructor (name, length) 
+    {
+      super(name);
+      this.name = name;
+      this.length = length;
+    }
+    introduce = function() {
+      console.log(`Hello World, my name is ${this.name}`)
+    }
+  }
 
 
 // /********* Uncomment these lines to test your work! *********/
-// const thai = new DeveloperClass('Thai', 32);
-// console.log(thai.name); // -> Logs 'Thai'
-// thai.introduce(); //-> Logs 'Hello World, my name is Thai'
-
+const thai = new DeveloperClass('Thai', 32);
+console.log(thai.name); // -> Logs 'Thai'
+thai.introduce(); //-> Logs 'Hello World, my name is Thai'
 
 
 /****************************************************************
